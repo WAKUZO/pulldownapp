@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Header } from './components/Header'
+import { Post } from './components/Post'
+import './style.css'
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="header">
+        <div className="heading">
+          <h1 className="headertitle">
+            OUT PUTer　
+            <span style={{ fontSize: '16px' }}>〜学び・気づき・感謝をシェアしよう〜</span>
+          </h1>
+        </div>
+        <Header />
+      </div>
+      <Post />
+    </>
+  )
 }
-
-export default App;
